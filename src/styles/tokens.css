@@ -1,0 +1,73 @@
+/* Design tokens: every colour, font and size the site uses.
+   Change the look of the whole site here. */
+
+:root {
+  --font-heading: 'Unbounded', system-ui, sans-serif;
+  --font-text: 'Inter', system-ui, sans-serif;
+
+  /* Accents stay the same in both themes */
+  --coral: #ef7a52;
+  --lime: #c8ec7e;
+  --sky: #8fcbe0;
+  --on-accent: #151a16;
+  /* Coral dark enough to read as text on the light background */
+  --accent-text: #c04a22;
+
+  --radius: 24px;
+  --radius-sm: 999px;
+  --max-width: 1160px;
+  --gutter: clamp(16px, 4vw, 40px);
+  --section-gap: clamp(80px, 12vw, 160px);
+
+  /* Light theme */
+  --bg: #fbf8f1;
+  --surface: #eef3e3;
+  --text: #151a16;
+  --text-muted: #5b6159;
+  --border: rgb(21 26 22 / 0.12);
+  --dots: rgb(21 26 22 / 0.16);
+  --icon: var(--text);
+  --shape-sky: #d4ecf4;
+  --shape-lime: #e4f5c2;
+  --contact-bg: #151a16;
+  --contact-text: #fbf8f1;
+
+  color-scheme: light;
+}
+
+/* Dark theme: chosen in the switch, or the OS setting before anything is chosen */
+:root[data-theme='dark'] {
+  --bg: #111512;
+  --surface: #1c231d;
+  --text: #f4f3ec;
+  --text-muted: #a3aa9f;
+  --border: rgb(244 243 236 / 0.14);
+  --dots: rgb(244 243 236 / 0.14);
+  --icon: var(--lime);
+  --shape-sky: #1f3a44;
+  --shape-lime: #2c3a1d;
+  --contact-bg: #0a0d0b;
+  --contact-text: #f4f3ec;
+  --accent-text: #ef7a52;
+
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #111512;
+    --surface: #1c231d;
+    --text: #f4f3ec;
+    --text-muted: #a3aa9f;
+    --border: rgb(244 243 236 / 0.14);
+    --dots: rgb(244 243 236 / 0.14);
+    --icon: var(--lime);
+    --shape-sky: #1f3a44;
+    --shape-lime: #2c3a1d;
+    --contact-bg: #0a0d0b;
+    --contact-text: #f4f3ec;
+    --accent-text: #ef7a52;
+
+    color-scheme: dark;
+  }
+}

@@ -1,0 +1,124 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 16px 20px;
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.reposted {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 4px -6px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-inline: 4px;
+}
+
+.avatar {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--lime);
+  color: var(--on-accent);
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.meta {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.tagRow {
+  padding-inline: 4px;
+}
+
+/* First five lines of the post; the rest is on LinkedIn */
+.text {
+  display: -webkit-box;
+  padding-inline: 4px;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  font-size: 16px;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  padding: 16px 4px 0;
+  border-top: 1px solid var(--border);
+}
+
+.stats {
+  display: flex;
+  gap: 16px;
+}
+
+.stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.link {
+  color: var(--accent-text);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.all {
+  display: inline-block;
+  margin-top: 28px;
+  font-size: 16px;
+  text-underline-offset: 4px;
+}

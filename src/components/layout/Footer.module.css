@@ -1,0 +1,17 @@
+.footer {
+  display: grid;
+  gap: 4px;
+  padding: 28px var(--gutter);
+  background: var(--contact-bg);
+  color: color-mix(in srgb, var(--contact-text) 85%, transparent);
+  font-size: 14px;
+  text-align: center;
+}
+
+.footer a {
+  text-underline-offset: 3px;
+}
+
+.footer a:hover {
+  color: var(--lime);
+}
