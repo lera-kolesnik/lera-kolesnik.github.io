@@ -1,4 +1,4 @@
-# Valeriia Kolesnyk — Portfolio
+# Portfolio
 
 **Website Link: [lera-kolesnik.github.io](https://lera-kolesnik.github.io/)**
 
