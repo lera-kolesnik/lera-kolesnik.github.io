@@ -1,32 +1,58 @@
-# React + TypeScript + Vite
+# Valeriia Kolesnyk — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+**Website Link: [lera-kolesnik.github.io](https://lera-kolesnik.github.io/)**
 
-Currently, two official plugins are available:
+Personal portfolio of a full-stack software engineer working with TypeScript, React, React Native and Python.
+Designed and built from scratch: responsive layout, light and dark themes, and automatic deployment on every push.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[![React](https://img.shields.io/badge/React_19-20232A?logo=react&logoColor=61DAFB)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)](https://vite.dev/)
+[![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?logo=githubactions&logoColor=white)](https://github.com/features/actions)
 
-## React Compiler
+## Tech stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Area | Tools |
+|---|---|
+| Framework | React 19, TypeScript |
+| Build | Vite |
+| Styling | CSS Modules, CSS custom properties (design tokens) |
+| Icons | Lucide |
+| Code quality | Oxlint |
+| CI/CD | GitHub Actions → GitHub Pages |
 
-## Expanding the Oxlint configuration
+## Features
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+- **Responsive design**: desktop layout plus a dedicated mobile menu
+- **Light / dark theme** that follows the system setting and remembers the visitor's choice
+- **Active section highlighting** in the navigation while scrolling
+- **Typed content layer**: all text lives in one typed data file, so components only render data
+- **Accessible markup**: semantic HTML, ARIA labels and visible focus states, plus support for reduced motion
+- **Automatic deployment**: every push to `main` is built and published by GitHub Actions
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+## Project structure
+
+```
+src/
+├─ components/
+│  ├─ layout/      # Header, Footer
+│  ├─ sections/    # Hero, About, Skills, Projects, Experience, Updates, Contact
+│  └─ ui/          # Reusable pieces: Tag, Icon, SectionHeading, ThemeToggle
+├─ data/           # CV content and LinkedIn posts (typed)
+├─ hooks/          # useTheme, useActiveSection
+├─ styles/         # Design tokens and global styles
+└─ types/          # TypeScript interfaces for all content
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+Then open http://localhost:5173.
+
+---
+
+Design inspired by [pepelsbey.dev](https://pepelsbey.dev/).
