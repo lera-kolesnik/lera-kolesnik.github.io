@@ -13,13 +13,6 @@ html {
   scroll-padding-top: calc(var(--header-height) + 32px);
 }
 
-/* On phones the menu wraps to a second row, so the header is taller */
-@media (max-width: 760px) {
-  html {
-    --header-height: 118px;
-  }
-}
-
 body {
   margin: 0;
   background: var(--bg);
@@ -28,6 +21,8 @@ body {
   font-size: 18px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  /* Decorations that poke past the edge must never widen the page on phones */
+  overflow-x: clip;
   transition: background-color 0.2s, color 0.2s;
 }
 

@@ -2,6 +2,8 @@
   position: relative;
   isolation: isolate;
   padding-top: clamp(40px, 7vw, 80px);
+  /* The rotated blob behind the photo must not widen the page */
+  overflow-x: clip;
 }
 
 /* Dot grid that fades out towards the edges */
@@ -150,8 +152,13 @@
     grid-template-columns: 1fr;
   }
 
+  /* Leave room on the right for the lime blob, which sits slightly offset */
   .photoCard {
-    width: min(100%, 360px);
+    width: min(84%, 340px);
+  }
+
+  .photoCard::before {
+    transform: rotate(-6deg) translate(4%, 3%);
   }
 
   .tagline {
